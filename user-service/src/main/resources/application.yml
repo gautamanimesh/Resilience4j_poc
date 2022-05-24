@@ -1,0 +1,12 @@
+server:
+  port: 9092
+
+resilience4j.ratelimiter:
+  instances:
+    processService:
+      limitForPeriod: 2
+      limitRefreshPeriod: 2s
+      timeoutDuration: 10s
+      registerHealthIndicator: true
+
+
